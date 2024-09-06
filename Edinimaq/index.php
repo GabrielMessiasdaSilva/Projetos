@@ -180,22 +180,25 @@
 
     </div>
 </div>
-<div class="flex item-center justify-between ...">
+<div class="flex flex-col md:flex-row items-center justify-between p-4">
+    <!-- Imagem -->
+    <img src="./assets/imagen2 .png" class="w-full md:w-1/2 lg:w-1/3 mb-4 md:mb-0 md:ms-8" alt="Descrição da Imagem">
 
-    <img src="./assets/imagen2 .png" class="w-1/2 md:w-1/3 ms-20">
-
-    <div class="mt-3">
+    <!-- Texto -->
+    <div class="text-center md:text-left md:ms-8">
         <h2 class="text-2xl font-bold">Título do Texto</h2>
         <p class="mt-2 text-lg">
             Aqui vai o conteúdo do texto que você deseja exibir ao lado da imagem.
         </p>
     </div>
 
-
-
 </div>
 
 
+
+<!--CARROSEL DE MARCAS-->
+
+<h2 class="text-center font-bold text-gray-600 text-lg"> TRABALHAMOS COM ESSAS MARCAS</h2>
 <div class="carousel-wrapper">
     <div class="carousel-inner">
         <!-- Adicione suas imagens aqui -->
@@ -238,47 +241,47 @@
         </div>
     </div>
 </div>
+
 <script>
-  document.addEventListener('DOMContentLoaded', function () {
-    const carouselInner = document.querySelector('.carousel-inner');
-    const carouselItems = document.querySelectorAll('.carousel-item');
-    const itemWidth = carouselItems[0].offsetWidth + parseFloat(getComputedStyle(carouselItems[0]).marginRight);
-    const totalItems = carouselItems.length;
+    document.addEventListener('DOMContentLoaded', function() {
+        const carouselInner = document.querySelector('.carousel-inner');
+        const carouselItems = document.querySelectorAll('.carousel-item');
+        const itemWidth = carouselItems[0].offsetWidth + parseFloat(getComputedStyle(carouselItems[0]).marginRight);
+        const totalItems = carouselItems.length;
 
-    // Duplicar itens para rotação contínua
-    for (let i = 0; i < totalItems; i++) {
-        const clone = carouselItems[i].cloneNode(true);
-        carouselInner.appendChild(clone);
-    }
-
-    // Ajustar a largura do contêiner para o total de itens
-    carouselInner.style.width = `${itemWidth * totalItems * 2}px`;
-
-    let currentPosition = 0;
-    const totalWidth = itemWidth * totalItems;
-    const speed = 30; // Tempo total de rotação (em segundos)
-
-    function moveCarousel() {
-        currentPosition += 1; // Ajuste a velocidade conforme necessário
-        if (currentPosition >= totalWidth) {
-            currentPosition = 0;
-            carouselInner.style.transition = 'none'; // Desativa a transição ao resetar a posição
-            carouselInner.style.transform = `translateX(0)`;
-            requestAnimationFrame(() => {
-                requestAnimationFrame(() => {
-                    carouselInner.style.transition = `transform ${speed}s linear`; // Ativa a transição novamente
-                    carouselInner.style.transform = `translateX(-${totalWidth}px)`;
-                });
-            });
-        } else {
-            carouselInner.style.transform = `translateX(-${currentPosition}px)`;
+        // Duplicar itens para rotação contínua
+        for (let i = 0; i < totalItems; i++) {
+            const clone = carouselItems[i].cloneNode(true);
+            carouselInner.appendChild(clone);
         }
-    }
 
-    // Iniciar o movimento contínuo
-    setInterval(moveCarousel, 10); // Atualize a posição a cada 10ms
-});
+        // Ajustar a largura do contêiner para o total de itens
+        carouselInner.style.width = `${itemWidth * totalItems * 2}px`;
 
+        let currentPosition = 0;
+        const totalWidth = itemWidth * totalItems;
+        const speed = 30; // Tempo total de rotação (em segundos)
+
+        function moveCarousel() {
+            currentPosition += 1; // Ajuste a velocidade conforme necessário
+            if (currentPosition >= totalWidth) {
+                currentPosition = 0;
+                carouselInner.style.transition = 'none'; // Desativa a transição ao resetar a posição
+                carouselInner.style.transform = `translateX(0)`;
+                requestAnimationFrame(() => {
+                    requestAnimationFrame(() => {
+                        carouselInner.style.transition = `transform ${speed}s linear`; // Ativa a transição novamente
+                        carouselInner.style.transform = `translateX(-${totalWidth}px)`;
+                    });
+                });
+            } else {
+                carouselInner.style.transform = `translateX(-${currentPosition}px)`;
+            }
+        }
+
+        // Iniciar o movimento contínuo
+        setInterval(moveCarousel, 10); // Atualize a posição a cada 10ms
+    });
 </script>
 <?php include 'includes/footer.php'; ?>
 
