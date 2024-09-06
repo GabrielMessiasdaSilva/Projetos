@@ -1,0 +1,76 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Adicionado para facilitar o controle de layout */
+}
+
+/* Estilo do corpo */
+body {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    background: #fff url(./imagens/fundo.png) repeat-x;
+}
+
+/* Topo */
+#topo {
+    height: 150px;
+    background: url(./imagens/detalhe-topo.png) no-repeat right top;
+    padding-top: 25px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Logo */
+.logo {
+    width: 150px;
+    height: 66px;
+    background: url(./imagens/logo.png) no-repeat center;
+    text-indent: -3000px; /* Mantido para esconder o texto */
+}
+
+/* Navegação */
+ul {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 10px;
+}
+
+/* Estilo específico da navegação no topo */
+#topo ul {
+    margin-top: 30px;
+    background: #b10333;
+    padding: 0 20px; /* Ajuste para centralizar melhor os itens */
+    border-radius: 5px; /* Adicionado para um toque visual */
+}
+
+#topo ul li {
+    font-size: 14px;
+    margin: 0 10px;
+}
+
+#topo ul a {
+    font-size: 0.9rem; /* Removido o erro de falta de unidade */
+    padding: 0.5em 1.5em;
+    text-decoration: none;
+    color: #fff;
+    background: url(./imagens/divisor.png) no-repeat left center;
+    transition: color 0.3s ease; /* Adicionado efeito de transição */
+}
+
+#topo ul .primeiro a {
+    background: none;
+}
+
+#topo ul a:hover {
+    color: #97022f;
+}
+
+/* Estilo específico para a navegação da página inicial */
+body.home #navegacao a#home {
+    color: #fff;
+    background: #de003d;
+    cursor: text;
+}

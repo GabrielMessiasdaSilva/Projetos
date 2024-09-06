@@ -1,0 +1,106 @@
+body{
+    background-color: #0a0a0a;
+}
+@font-face {
+    font-family: 'Oswald Stencil';
+ 
+    src: url(../assets/Fonte/OswaldStencil-Bold.woff);
+}
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.plataforma-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.header {
+    display: flex;
+    justify-content: space-around;
+    padding: 20px 15px;
+    background-color: #111111;
+    color: #ddd;
+    box-shadow: 10px 10px 10px #1e1e1e;
+}
+
+.logo {
+    font-family: 'Impact', 'Haettenschweiler', 'Arial Narrow Bold', sans-serif;
+    font-size: 40px;
+    color: #ff4500;
+    font: bold;
+}
+
+
+.navbar a {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 10px;
+    text-decoration: none;
+    color: #ddd;
+    transition: color 3s ease;
+}
+
+.navbar a:hover {
+    color: #ff4500;
+}
+
+.principal {
+    display: flex;
+    flex: 2;
+    justify-content: center;
+    align-items: center;
+    background: url('../assets/Home.png')no-repeat center center/cover;
+    text-align: center;
+    padding: 150px;
+
+}
+
+.hero-section h1 {
+    color: #ddd;
+    font-family: 'Oswald Stencil';
+    text-shadow: 2px 2px 8px rgba(177, 177, 177, 0.7);
+    margin: 20px;
+    font-size: 50px;
+    font-weight: bold;
+    font-style: normal;
+}
+
+.hero-section p {
+    color: #ddd;
+    margin-bottom: 30px;
+    font-size: 20px;
+    font-style: italic;
+}
+
+.botaoPrincipal {
+    border-radius: 5px;
+    padding: 10px 30px;
+    background-color: #ff4500;
+    border-style: none;
+    color: #fff;
+    transition: color 20s ease-out;
+    cursor: pointer;
+}
+.botaoPrincipal:hover{
+    color: #fff;
+}
+.subtitulo {
+    text-shadow: 2px 2px 8px rgba(2, 2, 2, 0.7);
+    color: rgb(163, 98, 0);
+    transition: color 10s ease-out, text-shadow 2s ease-out;
+}
+
+.subtitulo:hover {
+    color: rgb(179, 158, 126);
+    text-shadow: 4px 4px 15px rgba(2, 2, 2, 0.9);
+}
+footer{
+    display: flex;
+    justify-content: center;
+    color: #ddd;
+    padding: 20px;
+    margin: 10px;
+}
