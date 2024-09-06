@@ -31,8 +31,7 @@
     <div class="items-center lg:flex">
         <div class="w-full lg:w-1/2">
             <div class="lg:max-w-lg">
-                <h1 class="text-3xl font-semibold text-gray-800 dark:text-white lg:text-4xl">Confiança Total na
-                    Assistência <span class="text-blue-500">A melhor assistencia da </span><span class="text-yellow-400">Região</span>
+                <h1 class="text-3xl font-semibold text-gray-800 dark:text-white lg:text-4xl"> <span class="text-blue-500">A melhor assistencia da </span><span class="text-yellow-400">Região</span>
                 </h1>
                 <p class="mt-3 text-gray-600 dark:text-gray-400">Seu Eletrodoméstico, Nossa Prioridade – Consertos
                     Ágeis, Resultados Impecáveis!</p>
@@ -51,8 +50,8 @@
 
 <!--Sessão profissionais-->
 <div class="grid grid-cols-1 gap-6 mt-8 md:grid-cols-2 lg:grid-cols-4">
-    <div class="max-w-sm rounded overflow-hidden shadow-lg ms-8">
-        <img class="w-full" src="./assets/eletrolux-logo .png" alt="Sunset in the mountains">
+    <div class="max-w-sm rounded overflow-hidden shadow-lg m-8">
+        <img class="w-full" src="./assets/maquina-icon.png" alt="Sunset in the mountains">
         <div class="px-6 py-4 pb-4 ">
             <div class="font-bold text-xl mb-2">The Coldest Sunset</div>
             <p class="text-gray-700 text-base">
@@ -74,8 +73,8 @@
 
 
     <div>
-        <div class="max-w-sm rounded overflow-hidden shadow-lg ms-8">
-            <img class="w-full" src="/img/card-top.jpg" alt="Sunset in the mountains">
+        <div class="max-w-sm rounded overflow-hidden shadow-lg m-8">
+            <img class="w-full" src="./assets/fogão-icon.png" alt="Sunset in the mountains">
             <div class="px-6 py-4 pb-4 ">
                 <div class="font-bold text-xl mb-2">The Coldest Sunset</div>
                 <p class="text-gray-700 text-base">
@@ -99,8 +98,8 @@
 
     </div>
     <div>
-        <div class="max-w-sm rounded overflow-hidden shadow-lg ms-8">
-            <img class="w-full" src="/img/card-top.jpg" alt="Sunset in the mountains">
+        <div class="max-w-sm rounded overflow-hidden shadow-lg m-8">
+            <img class="w-full" src="./assets/microondas.png" alt="Sunset in the mountains">
             <div class="px-6 py-4 pb-4 ">
                 <div class="font-bold text-xl mb-2">The Coldest Sunset</div>
                 <p class="text-gray-700 text-base">
@@ -123,8 +122,8 @@
 
     </div>
     <div>
-        <div class="max-w-sm rounded overflow-hidden shadow-lg ms-8">
-            <img class="w-full" src="/img/card-top.jpg" alt="Sunset in the mountains">
+        <div class="max-w-sm rounded overflow-hidden shadow-lg m-8">
+            <img class="w-full" src="./assets/tanquinho-icon.png" alt="Sunset in the mountains">
             <div class="px-6 py-4 pb-4 ">
                 <div class="font-bold text-xl mb-2">The Coldest Sunset</div>
                 <p class="text-gray-700 text-base">
@@ -182,13 +181,14 @@
 </div>
 <div class="flex flex-col md:flex-row items-center justify-between p-4">
     <!-- Imagem -->
-    <img src="./assets/imagen2 .png" class="w-full md:w-1/2 lg:w-1/3 mb-4 md:mb-0 md:ms-8" alt="Descrição da Imagem">
+    <img src="./assets/Banner.png" class="w-full md:w-1/2 lg:w-1/3 mb-4 md:mb-0 md:ms-8" alt="Descrição da Imagem">
 
     <!-- Texto -->
     <div class="text-center md:text-left md:ms-8">
-        <h2 class="text-2xl font-bold">Título do Texto</h2>
-        <p class="mt-2 text-lg">
-            Aqui vai o conteúdo do texto que você deseja exibir ao lado da imagem.
+    <h2 class="text-3xl font-extrabold text-blue-600">Sua Assistência Técnica de Confiança: Qualidade e Compromisso em Cada Detalhe!</h2>
+
+        <p class="mt-2 text-lg text-gray-400">
+        Com mais de <strong>20 anos de experiência</strong> no mercado, somos referência em assistência técnica de qualidade. Durante esse período, já realizamos mais de <strong>5.000 reparos</strong> bem-sucedidos, conquistando a confiança de nossos clientes.Com excelente serviços e comentários,e a qualidade e preço justo o melhor da região de São Miguel Paulista . Nosso compromisso com a <strong>satisfação</strong> é comprovado pelos nossos <strong>98% de aprovação</strong>e trabalhamos com diversas marcas do mercado.
         </p>
     </div>
 
@@ -197,50 +197,35 @@
 
 
 <!--CARROSEL DE MARCAS-->
-
-<h2 class="text-center font-bold text-gray-600 text-lg"> TRABALHAMOS COM ESSAS MARCAS</h2>
+<h2 class="text-center font-bold text-gray-600 text-lg">TRABALHAMOS COM ESSAS MARCAS</h2>
 <div class="carousel-wrapper">
     <div class="carousel-inner">
         <!-- Adicione suas imagens aqui -->
         <div class="carousel-item">
-            <img src="https://via.placeholder.com/1920x1080" alt="Imagem 1">
+            <img src="./assets/brastemp-logo.png" alt="Imagem 1">
         </div>
         <div class="carousel-item">
-            <img src="https://via.placeholder.com/1920x1080" alt="Imagem 2">
+            <img src="./assets/eletrolux-logo .png" alt="Imagem 2">
         </div>
         <div class="carousel-item">
-            <img src="https://via.placeholder.com/1920x1080" alt="Imagem 3">
+            <img src="./assets/consul.png" alt="Imagem 3">
         </div>
         <div class="carousel-item">
-            <img src="https://via.placeholder.com/1920x1080" alt="Imagem 4">
+            <img src="./assets/dako.png" alt="Imagem 4">
         </div>
         <div class="carousel-item">
-            <img src="https://via.placeholder.com/1920x1080" alt="Imagem 5">
+            <img src="./assets/LG-logo.png" alt="Imagem 5">
         </div>
         <div class="carousel-item">
-            <img src="https://via.placeholder.com/1920x1080" alt="Imagem 6">
-        </div>
-        <!-- Repita as imagens para garantir um loop infinito -->
-        <div class="carousel-item">
-            <img src="https://via.placeholder.com/1920x1080" alt="Imagem 1">
+            <img src="./assets/logo-continental.png" alt="Imagem 6">
         </div>
         <div class="carousel-item">
-            <img src="https://via.placeholder.com/1920x1080" alt="Imagem 2">
-        </div>
-        <div class="carousel-item">
-            <img src="https://via.placeholder.com/1920x1080" alt="Imagem 3">
-        </div>
-        <div class="carousel-item">
-            <img src="https://via.placeholder.com/1920x1080" alt="Imagem 4">
-        </div>
-        <div class="carousel-item">
-            <img src="https://via.placeholder.com/1920x1080" alt="Imagem 5">
-        </div>
-        <div class="carousel-item">
-            <img src="https://via.placeholder.com/1920x1080" alt="Imagem 6">
+            <img src="./assets/logo_colormaq.png" alt="Imagem 7">
         </div>
     </div>
 </div>
+
+<? echo $HTTP_USER_AGENT; ?>
 
 <script>
     document.addEventListener('DOMContentLoaded', function() {
@@ -279,7 +264,7 @@
             }
         }
 
-        // Iniciar o movimento contínuo
+      
         setInterval(moveCarousel, 10); // Atualize a posição a cada 10ms
     });
 </script>
