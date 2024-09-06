@@ -1,0 +1,26 @@
+.carousel-wrapper {
+    margin-top: 20px;
+    overflow: hidden;
+    width: 100%; /* Largura total da viewport */
+    position: relative;
+}
+
+.carousel-inner {
+    display: flex;
+    width: 100%; /* Largura do contêiner principal */
+    white-space: nowrap; /* Para manter todos os itens em linha */
+    transition: transform 0s linear; /* Sem transição para um movimento contínuo */
+}
+
+.carousel-item {
+    flex: 0 0 auto;
+    margin-right: 10px;
+    width: 200px; /* Ajuste conforme necessário */
+}
+
+.carousel-item img {
+    width: 100%;
+    height: auto; /* Ajusta a altura proporcionalmente */
+    display: block;
+    border-radius: 0.5rem;
+}

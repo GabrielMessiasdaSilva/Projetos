@@ -11,9 +11,12 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="./assets/CSS/style.css">
+    <script src="./assets/JS/app.js"></script>
 
-<!-- Adicionar o JavaScript do Swiper -->
-<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <!-- Adicionar o JavaScript do Swiper -->
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
 
     <link
         href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap"
@@ -191,50 +194,92 @@
 
 
 </div>
-<div class="slider w-full h-64 relative">
-        <div class="slides flex">
-            <div class="slide bg-blue-500 h-full flex items-center justify-center text-white text-3xl">Slide 1</div>
-            <div class="slide bg-red-500 h-full flex items-center justify-center text-white text-3xl">Slide 2</div>
-            <div class="slide bg-green-500 h-full flex items-center justify-center text-white text-3xl">Slide 3</div>
+
+
+<div class="carousel-wrapper">
+    <div class="carousel-inner">
+        <!-- Adicione suas imagens aqui -->
+        <div class="carousel-item">
+            <img src="https://via.placeholder.com/1920x1080" alt="Imagem 1">
         </div>
-        <button class="nav-button prev">&lt;</button>
-        <button class="nav-button next">&gt;</button>
+        <div class="carousel-item">
+            <img src="https://via.placeholder.com/1920x1080" alt="Imagem 2">
+        </div>
+        <div class="carousel-item">
+            <img src="https://via.placeholder.com/1920x1080" alt="Imagem 3">
+        </div>
+        <div class="carousel-item">
+            <img src="https://via.placeholder.com/1920x1080" alt="Imagem 4">
+        </div>
+        <div class="carousel-item">
+            <img src="https://via.placeholder.com/1920x1080" alt="Imagem 5">
+        </div>
+        <div class="carousel-item">
+            <img src="https://via.placeholder.com/1920x1080" alt="Imagem 6">
+        </div>
+        <!-- Repita as imagens para garantir um loop infinito -->
+        <div class="carousel-item">
+            <img src="https://via.placeholder.com/1920x1080" alt="Imagem 1">
+        </div>
+        <div class="carousel-item">
+            <img src="https://via.placeholder.com/1920x1080" alt="Imagem 2">
+        </div>
+        <div class="carousel-item">
+            <img src="https://via.placeholder.com/1920x1080" alt="Imagem 3">
+        </div>
+        <div class="carousel-item">
+            <img src="https://via.placeholder.com/1920x1080" alt="Imagem 4">
+        </div>
+        <div class="carousel-item">
+            <img src="https://via.placeholder.com/1920x1080" alt="Imagem 5">
+        </div>
+        <div class="carousel-item">
+            <img src="https://via.placeholder.com/1920x1080" alt="Imagem 6">
+        </div>
     </div>
-    <script>
-        const slides = document.querySelector('.slides');
-        const slideCount = document.querySelectorAll('.slide').length;
-        let currentIndex = 0;
-        const intervalTime = 3000; // Tempo em milissegundos (3 segundos)
+</div>
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    const carouselInner = document.querySelector('.carousel-inner');
+    const carouselItems = document.querySelectorAll('.carousel-item');
+    const itemWidth = carouselItems[0].offsetWidth + parseFloat(getComputedStyle(carouselItems[0]).marginRight);
+    const totalItems = carouselItems.length;
 
-        function updateSlidePosition() {
-            slides.style.transform = `translateX(-${currentIndex * 100}%)`;
+    // Duplicar itens para rotação contínua
+    for (let i = 0; i < totalItems; i++) {
+        const clone = carouselItems[i].cloneNode(true);
+        carouselInner.appendChild(clone);
+    }
+
+    // Ajustar a largura do contêiner para o total de itens
+    carouselInner.style.width = `${itemWidth * totalItems * 2}px`;
+
+    let currentPosition = 0;
+    const totalWidth = itemWidth * totalItems;
+    const speed = 30; // Tempo total de rotação (em segundos)
+
+    function moveCarousel() {
+        currentPosition += 1; // Ajuste a velocidade conforme necessário
+        if (currentPosition >= totalWidth) {
+            currentPosition = 0;
+            carouselInner.style.transition = 'none'; // Desativa a transição ao resetar a posição
+            carouselInner.style.transform = `translateX(0)`;
+            requestAnimationFrame(() => {
+                requestAnimationFrame(() => {
+                    carouselInner.style.transition = `transform ${speed}s linear`; // Ativa a transição novamente
+                    carouselInner.style.transform = `translateX(-${totalWidth}px)`;
+                });
+            });
+        } else {
+            carouselInner.style.transform = `translateX(-${currentPosition}px)`;
         }
+    }
 
-        function nextSlide() {
-            if (currentIndex < slideCount - 1) {
-                currentIndex++;
-            } else {
-                currentIndex = 0; // Voltar para o primeiro slide
-            }
-            updateSlidePosition();
-        }
+    // Iniciar o movimento contínuo
+    setInterval(moveCarousel, 10); // Atualize a posição a cada 10ms
+});
 
-        function prevSlide() {
-            if (currentIndex > 0) {
-                currentIndex--;
-            } else {
-                currentIndex = slideCount - 1; // Ir para o último slide
-            }
-            updateSlidePosition();
-        }
-
-        document.querySelector('.next').addEventListener('click', nextSlide);
-        document.querySelector('.prev').addEventListener('click', prevSlide);
-
-        // Navegação automática
-        setInterval(nextSlide, intervalTime);
-    </script>
-
+</script>
 <?php include 'includes/footer.php'; ?>
 
 </html>
